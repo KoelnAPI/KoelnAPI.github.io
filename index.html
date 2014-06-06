@@ -1,65 +1,522 @@
+
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="images/favicon.ico">
 
-	<head>
-		<meta charset="utf-8">
-		<title>Köln API</title>
+    <title>Köln API - Data meets Citizen</title>
+    <meta name="description" content="Die Kölner Open-Data-Comunity. Hier treffen Daten auf Nutzen, Bürger auf Verwaltung, Spaß auf Ernst." />
+  	<link rel="image_src" href="/images/flat_startup_theme_image.jpg" />
+  	<meta property="og:title" content="Köln API - Data meets Citizen" />
+  	<meta property="og:description" content="Die Kölner Open-Data-Comunity. Hier treffen Daten auf Nutzen, Bürger auf Verwaltung, Spaß auf Ernst."  />
+  	<meta property="og:url" content="http://www.koelnapi.de/" />
+  	<meta property="og:image" content="" />
+  	<link rel="stylesheet" href="css/animate.css">
+  	<meta name="HandheldFriendly" content="true" />
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/theme.css">
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
 
-		<!--<meta name="apple-mobile-web-app-capable" content="yes" />
-		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">-->
+  <body class="">
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "http://connect.facebook.net/en_US/all.js#xfbml=1&appId=386496834740212";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" class="scrollto" href="#top"><img alt="Köln API" src="images/koelnapi_horizontal_200.png" width="50" height="25"/></a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="active"><a class="scrollto" href="#top">Home</a></li>
+             <li><a class="scrollto" href="#projekte">Projekte</a></li>
+             <li><a class="scrollto" href="#termine">Termine</a></li>
+             <li><a class="scrollto" href="#opendataguide">Open Data Guide</a></li>
+             <li><a class="scrollto" href="#about">Über uns</a></li>
+             <!--<li><a class="btn fus-btn-white" href="#">Login</a></li>-->
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div><!--/.container -->
+    </div>
+  
+    <!--<div class="fus-options">
+      <ul class="list-inline" id="select-options">
+        <li><a href="http://www.thepetedesign.com/#plugins" target="_blank">Built by The Pete Design</a></li>
+        <li class="active"><a href="#blue" class="color" style="background: #00BBFC;">Blue</a></li>
+        <li><a href="#red" class="color" style="background: #D73A40;">Red</a></li>
+        <li><a href="#yellow" class="color" style="background: #FFD600;">Yellow</a></li>
+        <li><a href="#green" class="color" style="background: #46C994;">Green</a></li>
+        <li><a href="#black" class="color" style="background: #333;">Black</a></li>
+      </ul>
+    </div>-->
+  
+    <!-- Main component for a primary marketing message or call to action -->
+    <div id="top" class="jumbotron">
+      <div class="fus-bg"></div>
+      <div class="fus-overlay"></div>
+      <div class="container">
+        <div class="fus-pitch">
+          <div class="fus-call-to-action">
+            <h1>Hallo, <span style="text-decoration: line-through">Welt</span> Köln!</h1>
+            <h2>Wir sind Köln <abbr title="Application Programming Interface, bedeutet so viel wie &raquo;Schnittstelle&laquo;">API</abbr>. Wir öffnen Daten und machen damit was schönes.</h2>
+            <div class="fus-btns">
+              <a href="#feature" class="scrollto btn fus-btn-white">Mehr erfahren</a>
+              <!--<a href="#" class="btn btn-primary">Sign Up</a>-->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div id="projekte" class="fus-section fus-feature fus-white-bg">
+      <div class="container">
+        <div class="fus-section-header">
+          <h3>Projekte</h3>
+          <h4>Ein paar Dinge, die im Dunstkreis von Köln API entstehen</h4>
+        </div>
+        
+        <ul class="nav nav-tabs fus-tabs">
 
-		<!-- Style -->
-        <link rel="stylesheet" type="text/css" href="css/style.css" />
-		
-	</head>
-	<body>
-    	<header id="mainHeader">
-        	<div id="divLinks">
-                <a href="https://www.facebook.com/KoelnAPI" target="_blank"><img id="imgFacebook" src="pics/face.png" /></a>
-                <a href="https://twitter.com/koelnapi" target="_blank"><img id="imgTwitter" src="pics/tweet.png" /></a>
+          <li class="active"><a href="#aedcgn" data-toggle="tab"><span class="glyphicon glyphicon-wrench"></span> <span class="fus-subtitle">Projekt 1</span></a></li>
+
+          <!--
+          <li><a href="#openorgdata" data-toggle="tab"><span class="glyphicon glyphicon-wrench"></span> <span class="fus-subtitle">Projekt 2</span></a></li>
+          -->
+
+          <li><a href="#unfallkarte" data-toggle="tab"><span class="glyphicon glyphicon-wrench"></span> <span class="fus-subtitle">Projekt 2</span></a></li>
+
+          <li><a href="#offeneskoeln" data-toggle="tab"><span class="glyphicon glyphicon-wrench"></span> <span class="fus-subtitle">Projekt 3</span></a></li>
+
+          <!--
+          <li><a href="#feature5" data-toggle="tab"><span class="glyphicon glyphicon-wrench"></span> <span class="fus-subtitle">Projekt 4</span></a></li>
+          -->
+
+        </ul>
+
+        <div class="tab-content fus-tab-content">
+
+          <!-- Feature 1 -->
+          <div class="tab-pane active" id="aedcgn">
+            <div class="row">
+              <div class="col-md-6 fus-photo">
+                <a class="animated bounceInLeft" href="#" target="_blank">
+                  <img src="images/projects/aedcgn.png" alt="Screenshot mobile Webapp">
+                </a>
+              </div>
+              <div class="col-md-6">
+                <div class="fus-tab-center animated fadeIn">
+                  <div class="fus-header">
+                    <h3>Lebensretter finden</h3>
+                    <h4>Köln API sammelt die Standortdaten von öffentlichen Defibrillatoren</h4>
+                  </div>
+                  <p>Stell Dir vor, es hängen hunderte öffentlich zugängliche Defibrillatoren (<abbr title="Automatisierter Externer Defibrillator">AED</abbr>) in der Stadt, aber keiner weiß genau, wo. Im Ernstfall zählt jede Minute, da bleibt keine Zeit zum Suchen und Fragen stellen.</p>
+                  <p>Deshalb sammeln und prüfen wir die Standortdaten von AEDs. Die Daten stellen wir offen für jeden zur Verfügung und zeigen sie in einer Smartphone-freundlichen Webanwendung an.</p>
+                  
+                  <a href="http://www.sendung.de/aedcgn/" target="_blank" class="btn btn-lg btn-primary">Zur Webapp &#10095;</a>
+                  <a href="http://wiki.koelnapi.de/w/Defibrillatoren" class="btn btn-lg">Mehr Details &#10095;</a>
+                  
+                </div>
+              </div>
             </div>
-	        <div id="divLogo">
-            	<img src="pics/koelnapi_horizontal_1000.png" />
+          </div>
+          <!-- Ende Feature 1 -->
+
+          <!-- Feature 2 -->
+          <!--
+          <div class="tab-pane" id="openorgdata">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="fus-tab-center animated fadeIn">
+                  <div class="fus-header">
+                    <h3>Handelsregister, offen</h3>
+                    <h4>OpenOrgData macht Unternehmensdaten deutschlandweit durchsuchbar</h4>
+                  </div>
+                  <p>Mit dieser Anwendung können Handelsregister und Vereinsregister nach Einträgen durchsucht werden. Da die Daten nicht im Sinne von Open Data für die weitere Nutzung lizensiert sind, wird das Ergebnis lediglich in Form einer statistischen Zusammenfassung präsentiert. Damit lässt sich immerhin zeigen, in welchem Bundesland wie viele Treffer mit dem gesuchten Begriff im Namen existieren.</p>
+
+                  <p>Entstanden beim Open Data Day in Köln, Februar 2013.</p>
+                  
+                  <a href="http://openorgdata.sendung.de/" target="_blank" class="btn btn-lg">Zur Anwendung &#10095;</a>
+                </div>
+              </div>
+              <div class="col-md-6 fus-photo">
+                <a class="animated bounceInRight" href="#" target="_blank">
+                  <img src="images/placeholder.png" alt="Placeholder of Your Feature">
+                </a>
+              </div>
             </div>
-        </header>
-        <section>
-            <div id="divBalken"></div>
-            <div id="divBalkenHeadline">WILLKOMMEN BEI <strong>KÖLN API</strong></div>
-            
-            <div id="divMain">
-                        	<div id="divcontent">
-                            <p><strong>Köln API</strong> ist eine Gruppe von Aktiven im Kölner Raum, die sich der Förderung der Bereitstellung und Nutzung von Open Data verschrieben hat. Köln API geht es vor allem um Wissensaustausch, Netzwerken und Erfolgserlebnisse. Bei Köln API kann jeder mitmachen. Mitmachen kann man, indem man an Treffen und Veranstaltungen teilnimmt und in der <a href="https://groups.google.com/forum/#!forum/koelnapi">Mailingliste</a> mitredet.</p>
-                        	</div>
-                <div class="event-box">
-                        	<div class="event-box-inner">
-                                <h3>Das nächste Treffen</h3>
-                                <img id="imgebox1" src="pics/next_event_icon1.png" /><h4> Dienstag <strong>17. Juni, 19 Uhr</strong></h4>
-                                <img id="imgebox2" src="pics/next_event_icon2.png" /><h5> Coworking Cologne<br>An der Bottmühle 5, 50678 Köln</h5>
-                            </div>
-                            <div class="triangle"></div>
-                    </div>
-                        	<div id="divcontent2">
-                            	<h2>WEGWEISER</h2>
-                                <p>Wegweiser zu Open-Data-Angeboten: <a href="http://wiki.koelnapi.de/w/Hauptseite#Wegweiser_zu_Open-Data-Angeboten:">ZU DEN WEGWEISERN</a></p>
-                                <h2>WUNSCHLISTEN</h2>
-                                <p>Wunschlisten mit Informationen zu Daten, die noch nicht als Open Data zur Verfügung stehen: <a href="http://wiki.koelnapi.de/w/Hauptseite#Wunschlisten_mit_Informationen_zu_Daten.2C_die_noch_nicht_als_Open_Data_zur_Verf.C3.BCgung_stehen:">ZU DEN WUNSCHLISTEN</a></p>
-                            </div>
-                        	<div id="divcontent3">
-                            	<h2>KÖLNER OPEN-DATA-PROJEKTE</h2>
-                                <p>Ein Überblick von Open-Data-Projekten in Köln, sei es Apps oder Datenangebote, und den Personen hinter diesen Projekten.</p>
-                                <div id="divcontentimg">
-                                <a href="http://openorgdata.sendung.de/"><img src="pics/screenshot1.png" /></a>
-                                <a href="http://schienenliebe.de/map"><img src="pics/screenshot2.png" /></a>                                
-                                <p><a href="http://wiki.koelnapi.de/w/K%C3%B6lner_Open-Data-Projekte">WEITERE PROJEKTE</a></p>
-                            </div>
+          </div>
+        -->
+          <!-- Ende Feature 2 -->
+          
+          <!-- Feature 3 -->
+          <div class="tab-pane" id="unfallkarte">
+            <div class="row">
+              <div class="col-md-6 col-md-offset-3 fus-fullwidth-content">
+                <div class="fus-tab-center">
+                  <div class="fus-header">
+                    <h3>Unfallkarte für Köln</h3>
+                    <h4>Wo passieren die meisten Verkehrsunfälle?</h4>                    
+                  </div>
+                  <p>
+                    <a class="animated bounceIn" href="#" target="_blank">
+                      <img src="images/projects/unfallkarte_50proz.png" alt="Placeholder of Your Feature">
+                    </a>
+                  </p>
+                  <p>Wir haben Berichte der Kölner Stadtverwaltung in eine einfache Kartendarstellung überführt.</p>
+                  
+                  <a href="http://offeneskoeln.de/lab/unfallkarte/" target="_blank" class="btn btn-lg btn-primary">Zur Unfallkarte &#10095;</a>
+                </div>
+              </div>
             </div>
-        </section>
-        <div class="clear"></div>
-        <footer>
-        	<div>
-              <p>© 2013 // MADE WITH LOVE BY <a href="http://railslove.com">RAILSLOVE</a> // ALL RIGHTS RESERVED</p><a href="https://groups.google.com/forum/#!forum/koelnapi" target="_blank">Mailingliste</a> | <a href="http://wiki.koelnapi.de/" target="_blank">Wiki</a> | <a href="http://railslove.com/imprint" target="_blank">Imprint</a>
+          </div>
+          <!-- Ende Feature 3 -->
+
+          <!-- Feature 4 -->
+          <div class="tab-pane" id="offeneskoeln">
+            <div class="row">
+              <div class="col-md-6 col-md-offset-3 fus-fullwidth-content">
+                <div class="fus-tab-center">
+                  <div class="fus-header">
+                    <h3>Offenes Köln</h3>
+                    <h4>Vorgänge aus dem Kölner Stadtrat leicht durchsuchen und nutzen</h4>
+                  </div>
+                  <p>
+                    <a class="animated bounceIn" href="#" target="_blank">
+                      <img src="images/projects/offeneskoeln_50proz.png" alt="Placeholder of Your Feature">
+                    </a>
+                  </p>
+                  
+                  <a href="http://offeneskoeln.de/" target="_blank" class="btn btn-lg btn-primary">Zur Anwendung &#10095;</a>
+                </div>
+              </div>
             </div>
-        </footer> 
-	</body>
+          </div>
+          <!-- Ende Feature 4 -->
+          
+          <!-- Feature 5 -->
+          <div class="tab-pane" id="feature5">
+            <div class="row">
+              <div class="col-md-6 fus-photo">
+                <a class="animated bounceInLeft" href="#" target="_blank">
+                  <img src="images/placeholder.png" alt="Placeholder of Your Feature">
+                </a>
+              </div>
+              <div class="col-md-6">
+                <div class="fus-tab-center animated fadeIn">
+                  <div class="fus-header">
+                    <h3>Offenes Köln</h3>
+                    <h4>Vorgänge aus dem Kölner Stadtrat leicht durchsuchen und nutzen</h4>
+                  </div>
+                  <p>Im Ratsinformationssystem der Stadt Köln lagern Informtionen zu vielen öffenltichen Vorgängen des Stadtrats, der Bezirksvertretungen und der dazu ge</p>
+                  
+                  <a href="http://offeneskoeln.de/" target="_blank" class="btn btn-lg">Zur Anwendung &#10095;</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Ende Feature 5 -->
+          
+          
+
+        </div>
+      </div>
+    </div>
+    
+    <div id="termine" class="fus-section fus-pricing">
+      <div class="fus-overlay"></div>
+      
+      <div class="container">
+
+        <div class="fus-section-header">
+          <h3>Termine</h3>
+          <h4>Das Köln API Meetup und anderer Treffen</h4>
+        </div>
+
+        <div class="row fus-pricing-table">
+          <div class="col-md-4 fus-notfocus">
+            <ul class="media-list pull-right">
+              <li class="fus-list-header">
+                <h5>Das nächste Köln API Meetup</h5>
+                <p><small>Di</small>, 17. Juni <small>2014</small></p>
+              </li>
+              <li class="media">
+                <a class="pull-left" href="#">
+                  <span class="glyphicon glyphicon-ok-circle media-object"></span>
+                </a>
+                <div class="media-body">
+                  <h4 class="media-heading">Sprechen</h4>
+                  <p class="media-text">über Chancen und Probleme von Open Data in Köln</p>
+                </div>
+              </li>
+              <li class="media">
+                <a class="pull-left" href="#">
+                  <span class="glyphicon glyphicon-ok-circle media-object"></span>
+                </a>
+                <div class="media-body">
+                  <h4 class="media-heading">Zeigen</h4>
+                  <p class="media-text">was man macht, was gut funktioniert und was nicht.</p>
+                </div>
+              </li>
+              <li class="media">
+                <a class="pull-left" href="#">
+                  <span class="glyphicon glyphicon-ok-circle media-object"></span>
+                </a>
+                <div class="media-body">
+                  <h4 class="media-heading">Netzwerken</h4>
+                  <p class="media-text">Andere mit ähnlichen Interessen kennenlernen.</p>
+                </div>
+              </li>
+              <li class="media">
+                <a class="pull-left" href="#">
+                  <span class="glyphicon glyphicon-ok-circle media-object"></span>
+                </a>
+                <div class="media-body">
+                  <h4 class="media-heading">Fördern</h4>
+                  <p class="media-text">Open Data Schritt für Schritt voranbringen.</p>
+                </div>
+              </li>
+              <li class="media">
+                <a href="http://wiki.koelnapi.de/w/2014-06-17" class="btn btn-primary btn-lg btn-block">Details</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-md-4 fus-focus">
+            <ul class="media-list">
+              <li class="fus-list-header">
+                <h5>Das nächste OK Lab</h5>
+                <p><small>Mo</small> 9. Juni <small>2014</small></p>
+              </li>
+              <li class="media">
+                <a class="pull-left" href="#">
+                  <span class="glyphicon glyphicon-ok-circle media-object"></span>
+                </a>
+                <div class="media-body">
+                  <h4 class="media-heading">Bauen</h4>
+                  <p class="media-text">Wir basteln gemeinsam an Projekten.</p>
+                </div>
+              </li>
+              <li class="media">
+                <a class="pull-left" href="#">
+                  <span class="glyphicon glyphicon-ok-circle media-object"></span>
+                </a>
+                <div class="media-body">
+                  <h4 class="media-heading">Unterstützen</h4>
+                  <p class="media-text">Wir helfen uns gegenseitig.</p>
+                </div>
+              </li>
+              <li class="media">
+                <a class="pull-left" href="#">
+                  <span class="glyphicon glyphicon-ok-circle media-object"></span>
+                </a>
+                <div class="media-body">
+                  <h4 class="media-heading">Verbessern</h4>
+                  <p class="media-text">Wir lösen ganz konkrete Probleme und schaffen Mehrwerte.</p>
+                </div>
+              </li>
+              <li class="media">
+                <a href="http://www.meetup.com/OKLab-Koln-Meetup/events/185634362/" target="_blank" class="btn btn-primary btn-lg btn-block">Details</a>
+              </li>
+            </ul>
+          </div>
+          
+        </div>
+
+        <div class="row">
+          <div class="col-md-6 col-md-offset-3" style="margin-top: 40px; margin-bottom: 40px">
+            <p><strong>OK Lab</strong> Treffen sind in erster Linie informelle Hack-Runden, während die <strong>Köln API Meetups</strong> ein breiteres Themenfeld abdecken und damit auch eine breitere Zielgruppe ansprechen.</p>
+
+            <p>Für alle Treffen gilt: <strong>Jede und jeder ist eingeladen</strong>. Eine Voranmeldung ist nicht nötig.</p>
+
+            <p>Inhalte und Notizen von vergangenen Köln API Meetups findest Du über die <a href="http://wiki.koelnapi.de/w/K%C3%B6ln_API_Meetup" target="_blank">Übersicht in unserem Wiki</a>.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    
+    <div id="opendataguide" class="fus-section fus-blog fus-white-bg">
+      <div class="container">
+        <div class="fus-section-header">
+          <h3>Open Data Guide</h3>
+          <h4>Ein Wegweiser zu Open Data aus der Region oder über die Region</h4>
+        </div>
+        <div class="row">
+
+          <div class="col-md-6 col-md-4">
+            <div class="thumbnail">
+              <!--<a href="#" target="_blank" class="zoom-images"><img src="images/placeholder5.jpg"></a>-->
+              <div class="caption">
+                <h3><a href="http://www.offenedaten-koeln.de/" target="_blank">Datenkatalog der Stadt Köln</a></h3>
+                <p>Der offizielle Überblick aller Datenangebot der Stadt Köln. Alle hier verfügbaren Datensätze sind mit Lizenzen versehen, in der Regel erfordern diese lediglich die Nennung der Stadt Köln als Quelle. Das Themenspektrum ist breit, das Angebot wächst kontinuierlich und es gibt eine Möglichkeit, noch nicht vorhandene Datensätze anzufragen.</p>
+                <a href="http://www.offenedaten-koeln.de/" class="btn fus-nobtn" role="button">Details</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-md-4">
+            <div class="thumbnail">
+              <!--<a href="#" target="_blank" class="zoom-images"><img src="images/placeholder4.jpg"></a>-->
+              <div class="caption">
+                <h3><a href="https://github.com/KoelnAPI/data/" target="_blank">Köln API GitHub Daten-Repository</a></h3>
+                <p>Wir sammeln selbst Daten für die Region aus verschiedenen Quellen und bereiten sie für die einfache Weiterverwendung auf. Durch die Versionskontrolle von Github sind Änderungen immer nachvollziehbar.</p>
+                <a href="https://github.com/KoelnAPI/data/" class="btn fus-nobtn" role="button">Details</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-md-4">
+            <div class="thumbnail">
+              <!--<a href="#" target="_blank" class="zoom-images"><img src="images/placeholder4.jpg"></a>-->
+              <div class="caption">
+                <h3><a href="http://offeneskoeln.de/api/" target="_blank">Offenes Köln API</a></h3>
+                <p>Daten aus der Lokalpolitik, offen zugänglich für Anwendungen aller Art.</p>
+                <a href="http://offeneskoeln.de/api/" class="btn fus-nobtn" role="button">Details</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-md-4">
+            <div class="thumbnail">
+              <!--<a href="#" target="_blank" class="zoom-images"><img src="images/placeholder4.jpg"></a>-->
+              <div class="caption">
+                <h3><a href="http://lobid.org/api" target="_blank">lobid API</a></h3>
+                <p>Zugang zu bibliotgrafischen Daten (Bibliothekskatalogen) des Hochschulbibliothekszentrums NRW (hbz).</p>
+                <a href="http://lobid.org/api" class="btn fus-nobtn" role="button">Details</a>
+              </div>
+            </div>
+          </div>
+          
+          
+        </div>
+      </div>
+    </div>
+    
+    <div id="about" class="fus-section fus-seen-on fus-white-bg">
+      <div class="container">
+        <div class="fus-section-header">
+          <h3>Über uns</h3>
+          <h4>Wer und was wir eigentlich sind.</h4>
+          <p>Köln API ist eine <strong>Community-Initiative</strong> zur Förderung von Open Data in Köln. Wir sind <strong>kein Verein</strong>, es gibt keine formelle Mitgliedschaft. Jeder darf bei uns mitmachen.</p>
+          <p>Wir wollen diejenigen zusammen bringen, die in Köln Open Data voran bringen und damit etwas bewirken wollen. Das gelingt uns bei unseren <strong>Treffen</strong> schon ganz gut &ndash; zu den regelmäßigen Teilnehmern zählen auch die Open-Data-Verantwortlichen der Stadt Köln &ndash; ist aber immer ausbaufähig.</p>
+          <p>Neben den Treffen organisieren wir hin und wieder <strong>größere Veranstaltungen</strong> zum Thema Open Data. Und wir initiieren <strong>Projekte</strong> und arbeiten dauerhaft an Themen, wie beispielsweise den <a class="scrollto" href="#aedcgn">Standortdaten von Defibrillatoren</a>.
+          <p>Zwischen den Terminen kommunizieren wir über unsere offene <a href="https://groups.google.com/forum/#!forum/koelnapi" target="_blank">Mailingliste</a> (Google Group). Wir sind außerdem auf <a href="https://twitter.com/koelnapi" target="_blank">Twitter</a> und <a href="https://www.facebook.com/KoelnAPI" target="_blank">Facebook</a> aktiv und freuen uns, gefolgt, gemocht und geteilt zu werden.</p>
+          <p></p>
+        </div>
+      </div>
+    </div>
+    
+    <!--
+    <div id="about" class="fus-section fus-about">
+      <div class="fus-overlay"></div>
+      <div class="container">
+        <div class="fus-section-header">
+          <h3>About Us</h3>
+          <h4>We love what we do</h4>
+        </div>
+        <div class="row">
+          <div class="col-md-6 col-md-4">
+            <div class="zoom-images thumbnail fus-text-on-top">
+              <img src="images/placeholder6.jpg">
+              <div class="caption">
+                <h3><a href="http://www.thepetedesign.com" target="_blank">Pete R.</a></h3>
+                <p>A Designer, a traveler, an entrepreneur, a founder, a developer, a marketer and everything in between</p>
+                <div class="fus-socials">
+                  <a href="#" data-toggle="tab"><span class="glyphicon glyphicon-envelope"></span></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-md-4">
+            <div class="zoom-images thumbnail fus-text-on-top">
+              <img src="images/placeholder6.jpg">
+              <div class="caption">
+                <h3><a href="http://www.thepetedesign.com" target="_blank">Pete R.</a></h3>
+                <p>A Designer, a traveler, an entrepreneur, a founder, a developer, a marketer and everything in between</p>
+                <div class="fus-socials">
+                  <a href="#" data-toggle="tab"><span class="glyphicon glyphicon-envelope"></span></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-md-4">
+            <div class="zoom-images thumbnail fus-text-on-top">
+              <img src="images/placeholder6.jpg">
+              <div class="caption">
+                <h3><a href="http://www.thepetedesign.com" target="_blank">Pete R.</a></h3>
+                <p>A Designer, a traveler, an entrepreneur, a founder, a developer, a marketer and everything in between</p>
+                <div class="fus-socials">
+                  <a href="#" data-toggle="tab"><span class="glyphicon glyphicon-envelope"></span></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    -->
+    
+    <div id="kudos" class="fus-section fus-seen-on fus-white-bg">
+      <div class="container">
+        <div class="fus-section-header">
+          <h3>Unterstützer</h3>
+          <h4>Wir bedanken uns für die immer gastfreundliche Aufnahme in den Räumen von Coworking Cologne bei unserem Dauer-Gastgeber:</h4>
+        </div>
+        <div class="fus-as-seen">
+          <a href="http://www.railslove.com/" target="_blank">
+            <img src="images/railslove-logo-175x42.png">
+          </a>
+        </div>
+      </div>
+    </div>
+    
+    <footer class="fus-section"> 
+      <div class="fus-overlay"></div>
+      <div class="container">
+        <ul class="list-inline">
+          <li><a class="scrollto" href="#projekte">Projekte</a></li>
+          <li><a class="scrollto" href="#termine">Termine</a></li>
+          <li><a class="scrollto" href="#opendataguide">Open Data Guide</a></li>
+          <li><a class="scrollto" href="#about">Über uns</a></li>
+        </ul>
+      </div>
+    </footer>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/jquery.zoom-scroller.js"></script>
+    
+     <!-- Place this tag after the last +1 button tag. -->
+      <script type="text/javascript">
+        (function() {
+          var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+          po.src = 'https://apis.google.com/js/platform.js';
+          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+        })();
+      </script>
+    
+      <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+  </body>
 </html>

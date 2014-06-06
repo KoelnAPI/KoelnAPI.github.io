@@ -1,0 +1,884 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700,300);
+
+body {
+  min-height: 2000px;
+  font-family: 'Open Sans', 'Helvetica Neue', 'Helvetica';
+  color: #fff;
+  -webkit-font-smoothing: antialiased;
+}
+
+a:hover{
+  text-decoration: none;
+}
+
+
+body .navbar.navbar-fixed-top {
+  margin-bottom: 0;
+}
+
+body .navbar {
+  background: transparent;
+  -webkit-transition: background .4s ease; 
+  -moz-transition: background .4s ease;
+  -o-transition: background .4s ease;
+  transition: background .4s ease;
+}
+
+body .navbar.fus-navbar-solid {
+  background: rgba(58, 146, 215, 0.87);
+}
+
+body .navbar.fus-navbar-solid .navbar-brand {
+  padding: 15px 15px;
+}
+
+body .navbar.fus-navbar-solid .navbar-nav > li > a {
+  margin: 10px 10px;
+}
+
+body .navbar-brand {
+  padding: 25px 15px;
+}
+
+body .navbar .navbar-header a {
+  color: white;
+}
+
+body .navbar-nav > li > a {
+  color: white;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  padding: 5px;
+  margin: 20px 10px;
+  border-bottom: 2px solid transparent;
+}
+
+body .navbar-nav > li > a:hover { 
+  background: none;
+  border-bottom: 2px solid white;
+}
+
+body .navbar-nav > li > a.btn {
+  padding: 5px 10px;
+  margin-top: 18px;
+  border-bottom: 1px solid white;
+}
+
+body .navbar-nav > li > a.btn:hover {
+  border-width: 1px;
+  background: rgba(255,255,255,0.25);
+}
+
+body .navbar .navbar-header .navbar-brand {
+  font-size: 22px;
+  font-weight: bold;
+  line-height: 75%;
+}
+
+body .btn {
+  color: #333;
+  font-family: 'Open Sans', 'Helvetica Neue', 'Helvetica';
+  border: 1px solid #333;
+  font-weight: 700;
+  padding: 5px 10px;
+  text-transform: uppercase;
+  background: none;
+  box-shadow: none;
+  letter-spacing: 1px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-transition: all .4s ease; 
+  -moz-transition: all .4s ease;
+  -o-transition: all .4s ease;
+  transition: all .4s ease;
+}
+
+body .btn:hover {
+  background: #404041;
+  color: #fff;
+  border-color: #404041;
+}
+
+body .btn-lg {
+  font-size: 14px;
+  padding: 10px 20px;
+}
+
+body .fus-btn-white {
+  color: white;
+  border-color: white;
+}
+body .fus-btn-white:hover {
+  color: #fff;
+  border-color: white;
+  background: rgba(255,255,255,0.25);
+}
+
+body .btn-primary {
+  color: #fff;
+  background: #00BBFC;
+  border-color: #00BBFC; 
+}
+
+body .btn-primary:hover {
+  background: #3A92D7;
+  border-color: #00BBFC;
+}
+
+body .fus-options {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 10;
+  background: rgba(51, 51, 51, 0.71);
+  color: white;
+  padding: 10px;
+}
+
+body .fus-options li {
+  float: left;
+}
+
+body .fus-options li:first-child a {
+  padding:4px 10px;
+}
+
+body .fus-options a {
+  font-family: georgia;
+  font-size: 16px;
+  font-style: italic;
+  line-height: 140%;
+  color: white;
+  display: inline-block;
+}
+
+body .fus-options a.color {
+  text-indent: -9999999px;
+  width: 25px;
+  height: 25px;
+  overflow: hidden;
+  border: 2px solid transparent;
+  border-radius: 50px;
+  -o-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+}
+
+body .fus-options .active a.color {
+  border-color: white;
+}
+
+body .jumbotron {
+  border-radius: 0;
+  height: 750px;
+  padding-top: 80px;
+  margin: 0;
+  width: 100%;
+  position: relative;
+}
+body .jumbotron .fus-bg {
+  position: fixed;
+  background: url("../images/koelnapi_map.png") center center no-repeat;
+  background-size: cover;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+body .fus-overlay {
+  position:absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background:#3A92D7;
+  opacity: 0.15;
+  -webkit-transition: all .4s ease; 
+  -moz-transition: all .4s ease;
+  -o-transition: all .4s ease;
+  transition: all .4s ease;
+}
+
+
+body .jumbotron .container {
+    display: table;
+    height: 620px;
+}
+
+body .jumbotron .container .fus-pitch {
+  text-align: center;
+  position: relative;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+body .jumbotron .container .fus-pitch  .fus-call-to-action {
+  position: relative;
+}
+
+body .jumbotron .container .fus-pitch h1 {
+  font-weight: 100;
+  font-size: 46px;
+  line-height: 120%;
+  margin: 0 0 5px 0;
+  color: white;
+}
+
+body .jumbotron .container .fus-pitch h2 {
+  font-family: georgia;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 140%;
+  margin: 0 0 0 0;
+  font-style: italic;
+  color: white;
+}
+
+body .jumbotron .container .fus-pitch a {
+  color: white;
+  font-weight: bold;
+}
+
+
+
+body .fus-btns {
+  text-align: center;
+  margin: 20px 0 0;
+}
+
+body .fus-btns .btn {
+  display: inline-block;
+  margin: 0 10px;
+  font-size: 14px;
+  padding: 10px 20px;
+}
+
+.fus-section, .fus-section > .container {
+  position: relative;
+}
+
+.fus-section {
+  padding: 25px;
+}
+
+.fus-section.fus-white-bg {
+  background: white;
+  color: #333;
+}
+.fus-section.fus-white-bg .fus-section-header {
+  border-bottom: 1px solid #f1f1f2;
+}
+
+
+.fus-section .fus-section-header {
+ padding: 35px 0; 
+ margin-bottom: 35px;
+ text-align: center;
+}
+
+
+.fus-section .fus-section-header h3, .fus-section .fus-header h3 {
+ font-size: 36px; 
+ font-weight: 100;
+ line-height: 120%;
+ margin: 0 0 5px 0;
+}
+
+.fus-section .fus-section-header h4, .fus-section .fus-header h4 {
+ font-size: 18px; 
+ font-family: georgia;
+ font-weight: 400;
+ line-height: 140%;
+ margin: 0 0 10px 0;
+ font-style: italic;
+}
+
+
+.fus-section .fus-header {
+  text-align: left;
+  margin-bottom: 35px;
+}
+
+.fus-tabs {
+  text-align: center;
+  border: none;
+}
+
+.fus-tabs li {
+  display: inline-block;
+  float: none;
+  border: none;
+}
+
+.fus-tabs li:hover a {
+  background: none;
+  border: none;
+}
+
+.nav-tabs.fus-tabs > li.active > a, .nav-tabs.fus-tabs > li.active > a:hover, .nav-tabs.fus-tabs > li.active > a:focus {
+  border: none;
+}
+
+.fus-tabs li:hover a .glyphicon {
+  background: #f1f1f2;
+}
+
+.fus-tabs li.active a {
+  color: #3A92D7;
+  border: none;
+}
+
+.fus-tabs li.active a:hover {
+  color: #3A92D7;
+  border: none;
+}
+
+.fus-tabs li.active a .glyphicon {
+  color: white;
+  background: #3A92D7;
+  border-color: #3A92D7;
+}
+
+.fus-tabs li a {
+  color: #333;
+  margin-right: 0;
+  border: none;
+  
+}
+.fus-tabs li a:focus {
+  outline: none;
+}
+.fus-tabs li a .glyphicon {
+  font-size: 20px;
+  padding: 15px;
+  line-height: 100%;
+  border: 1px solid #333;
+  border-radius: 50px;
+  -o-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -webkit-transition: background .4s ease; 
+  -moz-transition: background .4s ease;
+  -o-transition: background .4s ease;
+  transition: background .4s ease;
+}
+
+
+.fus-tabs li a .fus-subtitle {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: bold;
+  display: block;
+  font-size: 12px;
+  margin-top: 10px;
+}
+
+.fus-tab-content {
+  padding: 35px 0;
+  margin: 35px 0;
+}
+
+.fus-tab-content p {
+  color: #808184;
+  font-size: 18px;
+  line-height: 140%;
+  margin-bottom: 25px;
+}
+
+
+.fus-tab-content > .tab-pane > .row {
+  display: table;
+  vertical-align: middle;
+}
+
+.fus-tab-content > .tab-pane > .row > [class*="col-"] {
+  display: table-cell;
+  vertical-align: middle;
+  float: none;
+}
+
+.fus-tab-content > .tab-pane > .row > [class*="col-"].fus-photo {
+  text-align: center;
+}
+
+.fus-tab-content > .tab-pane > .row > [class*="col-"].fus-photo img{
+  max-width: 400px;
+}
+
+.fus-tab-content > .tab-pane > .row > .fus-fullwidth-content {
+  text-align: center;
+}
+
+.fus-tab-content > .tab-pane > .row > .fus-fullwidth-content .fus-header {
+  text-align: center;
+}
+
+.fus-pricing {
+  color: white;
+}
+
+.fus-pricing .fus-overlay {
+  opacity: 0.4;
+}
+
+.fus-pricing .fus-pricing-table {
+  display: table;
+  width: 100%;
+}
+
+
+.fus-pricing .fus-pricing-table > [class*="col-"].fus-notfocus .media-list {
+  width:90%;
+  padding: 15px;
+}
+
+
+.fus-pricing .fus-pricing-table > [class*="col-"] {
+  display: table-cell;
+  vertical-align: middle;
+  float: none;
+}
+
+.fus-pricing .fus-pricing-table .media-list {
+  background: rgba(0,0,0,0.25);
+  padding: 25px;
+}
+
+.fus-pricing .fus-pricing-table .media-list .media-list-item {
+  background: none;
+  border: none;
+  text-align: left;
+  padding: 10px 10px;
+}
+
+.fus-pricing .fus-pricing-table .media-list .media.disabled{
+
+  text-decoration: line-through;
+}
+
+.fus-pricing .fus-pricing-table .media-list .media .media-object {
+  padding: 50px;
+  font-size: 22px;
+  font-weight: 400;
+  padding: 18px 8px;
+}
+
+.fus-pricing .fus-pricing-table .media-list .media .media-object.glyphicon-ok-circle {
+  color: #D6DE23;
+}
+
+.fus-pricing .fus-pricing-table .media-list .media .media-object.glyphicon-remove-circle {
+  color: #FFA1AE;
+}
+
+.fus-pricing .fus-pricing-table .media-list .media .media-heading {
+  font-weight: bold;
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: left;
+  margin-bottom: 7px;
+}
+
+.fus-pricing .fus-pricing-table .media-list .media .media-text {
+  font-family: georgia;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 140%;
+  margin: 0 0 0 0;
+  font-style: italic;
+  letter-spacing: 0px;
+  color: white;
+}
+
+.fus-pricing .fus-pricing-table .fus-list-header h5 {
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+  margin: 0;
+}
+
+.fus-pricing .fus-pricing-table .fus-list-header p {
+  font-size: 44px;
+  font-weight: 100;
+  text-align: center;
+}
+
+.fus-pricing .fus-pricing-table .fus-list-header small {
+  font-size: 13px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+  
+.thumbnail {
+  border: 1px solid #E6E7E8;
+  background: white;
+  padding: 0;
+}
+
+.zs-img {
+  position: absolute;
+}
+
+.thumbnail .caption {
+  padding: 20px;
+  position: relative;
+}
+
+.thumbnail .caption h3 {
+  font-weight: bold;
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: left;
+  margin: 0 0 7px 0;
+}
+
+.thumbnail .caption h3 a {
+  color: #333;
+}
+
+.thumbnail .caption p {
+  font-family: georgia;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 140%;
+  margin: 0 0 20px 0;
+  font-style: italic;
+  letter-spacing: 0px;
+}
+
+
+body .fus-nobtn {
+  border: none;
+  font-style: normal;
+  -o-border-radius: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  padding:5px 0;
+  border-bottom: 2px solid transparent;
+}
+
+body .fus-nobtn:hover {
+  border-bottom: 2px solid #333;
+  background: none;
+  color: #333;
+}
+
+.fus-about {
+  background: url("../images/placeholder7.jpg") center center no-repeat;
+  background-size: cover;
+}
+
+.fus-about .thumbnail {
+  background-size: cover;
+  position: relative;
+  border: none;
+}
+
+.fus-about  .thumbnail.fus-text-on-top .caption {
+  color: white;
+  padding-top: 250px;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(0, 0, 0, 0)), color-stop(90%, rgba(0, 0, 0, 0.69)));
+  background: -webkit-linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.69) 90%);
+  background: -moz-linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.69) 90%);
+  background: -o-linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.69) 90%);
+  background: linear-gradient(rgba(0, 0, 0, 0),rgba(0, 0, 0, 0.69) 90%);
+}
+
+.fus-about  .thumbnail.fus-text-on-top .caption a{
+  color: white;
+}
+
+
+.fus-about .thumbnail .caption .fus-socials {
+  color: white;
+  font-size: 15px;
+}
+
+.fus-as-seen {
+  text-align: center;
+  padding-bottom: 15px;
+}
+
+.fus-as-seen > a {
+  display: inline-block;
+  margin: 0 10px; 
+}
+
+footer ul {
+  text-align: center;
+}
+
+footer ul > li > a {
+  color: white;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  padding: 5px;
+  margin: 10px;
+  border-bottom: 2px solid transparent;
+}
+
+footer ul > li > a:hover {
+  color: white;
+  border-bottom: 2px solid #fff;
+}
+
+footer {
+  text-align: center;
+}
+
+footer .footer-brand {
+  font-size: 22px;
+  font-weight: bold;
+  line-height: 75%;
+}
+
+footer .credit {
+  margin: 40px 0 30px;
+}
+
+footer .credit p {
+  font-style: italic;
+  font-family: georgia;
+  font-size: 12px;
+}
+footer .credit a {
+  color: white;
+  font-weight: bold;
+}
+
+/****************************
+* Color Themes
+****************************/
+
+/* Red */
+body.fus-red .fus-overlay, body.fus-red .fus-tabs li.active a .glyphicon {
+  background: #D73A40;
+  border-color: #D73A40;
+}
+
+body.fus-red .btn-primary {
+  color: #FFF;
+  background: #FF0062;
+  border-color: #FF0062;
+}
+
+body.fus-red .btn-primary:hover {
+  color: #FFF;
+  background: #C61A5C;
+  border-color: #FF0062;
+}
+
+body.fus-red .fus-tabs li.active a .fus-subtitle {
+  color: #FF0062;
+}
+
+body.fus-red .navbar.fus-navbar-solid {
+  background: rgba(215, 58, 64, 0.88);
+}
+
+@media (max-width: 768px) {
+  
+  body.fus-red .navbar-collapse {
+    background: rgba(215, 58, 64, 0.88);
+  }
+}
+
+
+/* Yellow */
+body.fus-yellow .fus-overlay, body.fus-yellow .fus-tabs li.active a .glyphicon {
+  background: #FFD600;
+  border-color: #FFD600;
+}
+
+body.fus-yellow .btn-primary {
+  color: #000 !important;
+  background: #FFD600;
+  border-color: #FFD600;
+}
+
+body.fus-yellow .btn-primary:hover {
+  color: #000 !important;
+  background: #FFC200;
+  border-color: #FFD600;
+}
+
+body.fus-yellow .fus-tabs li.active a .fus-subtitle {
+  color: #FFD600;
+}
+
+body.fus-yellow .navbar.fus-navbar-solid {
+  background: rgba(255, 173, 0, 0.93);
+}
+
+@media (max-width: 768px) {
+  body.fus-yellow .navbar-collapse {
+    background: rgba(255, 173, 0, 0.93);
+  }
+}
+
+/* Yellow */
+body.fus-green .fus-overlay, body.fus-green .fus-tabs li.active a .glyphicon {
+  background: #46C994;
+  border-color: #46C994;
+}
+
+body.fus-green .btn-primary {
+  color: #fff;
+  background: #46C994;
+  border-color: #46C994;
+}
+
+body.fus-green .btn-primary:hover {
+  color: #fff;
+  background: #10AF6F;
+  border-color: #46C994;
+}
+
+body.fus-green .fus-tabs li.active a .fus-subtitle {
+  color: #46C994;
+}
+
+body.fus-green .navbar.fus-navbar-solid {
+  background: rgba(70, 201, 148, 0.93);
+}
+
+/* Black */
+body.fus-black .fus-overlay, body.fus-black .fus-tabs li.active a .glyphicon {
+  background: #333;
+  border-color: #333;
+}
+
+body.fus-black .btn-primary {
+  color: #fff;
+  background: #333;
+  border-color: #333;
+}
+
+body.fus-black .btn-primary:hover {
+  color: #fff;
+  background: #000;
+  border-color: #333;
+}
+
+body.fus-black .fus-tabs li.active a .fus-subtitle {
+  color: #333;
+}
+
+body.fus-black .navbar.fus-navbar-solid {
+  background: rgba(0, 0, 0, 0.43);
+}
+
+
+@media (max-width: 769px) {
+  .container {
+    width: 100%;
+  }
+  body .jumbotron .fus-bg {
+    position: absolute;
+  }
+  body #pricing {
+    background: url("../images/koelnapi_map.png") center center no-repeat;
+    background-size: cover;
+  }
+  body footer {
+    background: url("../images/koelnapi_map.png") center center no-repeat;
+    background-size: cover;
+  }
+}
+
+@media (max-width: 500px) {
+  body .fus-tab-content > .tab-pane > .row > [class*="col-"].fus-photo img {
+    width: 100%;
+  }
+  
+  body #select-options li:first-child {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  body .navbar-collapse {
+    background: rgba(58, 146, 215, 0.87);
+  }
+  body .fus-btns .btn {
+    margin-bottom: 15px;
+  } 
+  body.fus-black .navbar-collapse {
+    background: rgba(0, 0, 0, 0.43);
+  }
+  .container {
+    width: 100%;
+  }
+}
+
+@media (max-width: 989px) {
+  body .navbar-toggle .icon-bar {
+    background: #FFF;
+    height: 4px;
+  }
+  
+  
+  
+  body .fus-tab-content > .tab-pane > .row > [class*="col-"] {
+    display: block;
+    width: 100%;
+    margin-bottom: 25px;
+  }
+  
+  
+  body .fus-tab-content p, body .fus-section .fus-header {
+    text-align: center;
+  }
+  
+  body .fus-tab-content .btn {
+    display: block;
+  }
+  
+  body .fus-tab-content img {
+    max-width: 100%;
+  }
+  
+  body .fus-pricing .fus-pricing-table > [class*="col-"] {
+    display: block;
+    width: 100%;
+    margin-bottom: 25px;
+    float: left;
+  }
+  
+  body .fus-pricing .fus-pricing-table > [class*="col-"].fus-notfocus .media-list {
+    width: 100%;
+    padding: 25px;
+  }
+  
+  body .fus-pricing .fus-pricing-table {
+    display: block;
+    margin: 0;
+    width: 100%;
+  }
+  
+  body .fus-as-seen > a {
+    margin-bottom: 10px;
+  }
+  
+  body .fus-tab-content > .tab-pane > .row > [class*="col-"].fus-photo img {
+    max-width: 100%;
+  }
+  
+  body footer ul > li > a {
+    margin-bottom: 0;
+    display: inline-block;
+  }
+}
